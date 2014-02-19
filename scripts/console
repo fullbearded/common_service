@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'irb'
+require File.expand_path('../../main', __FILE__)
+
+module IRBExtensition
+  def reload!
+    puts 'reloading...'
+    ActiveSupport::Dependencies.clear
+    nil
+  end
+end
+
+IRB::ExtendCommandBundle.send :include, IRBExtensition
+
+IRB.start
+
+

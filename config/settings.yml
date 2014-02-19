@@ -1,0 +1,14 @@
+database:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: common
+  pool: 5
+  username: root
+  password: '123456'
+  host: 127.0.0.01
+  port: 3306
+
+memcached:
+  - 127.0.0.1:11211:10
+  - localhost:11211:10
